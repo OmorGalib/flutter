@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:cs_guide/constants.dart';
-import 'package:cs_guide/model/product_model.dart';
-import 'package:flutter/material.dart';
 
 import 'components/appbar.dart';
 import 'components/category.dart';
@@ -19,40 +17,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //bottom bar
-      // now we will use bottom bar package
-      bottomNavigationBar: BottomNavyBar(
-        selectedIndex: _selectedIndex,
-        showElevation: true, // use this to remove appBar's elevation
-        onItemSelected: (index) => setState(() {
-          _selectedIndex = index;
-        }),
-        items: [
-          BottomNavyBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home'),
-              activeColor: kpink,
-              inactiveColor: Colors.grey[300]),
-          BottomNavyBarItem(
-            icon: Icon(Icons.favorite_rounded),
-            title: Text('Favorite'),
-            inactiveColor: Colors.grey[300],
-            activeColor: kpink,
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.message),
-            title: Text('Messages'),
-            inactiveColor: Colors.grey[300],
-            activeColor: kpink,
-          ),
-          BottomNavyBarItem(
-            icon: Icon(Icons.person),
-            title: Text('Profile'),
-            inactiveColor: Colors.grey[300],
-            activeColor: kpink,
-          ),
-        ],
-      ),
       body: SafeArea(
         child: ListView(
           children: [
